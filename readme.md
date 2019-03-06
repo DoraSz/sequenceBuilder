@@ -83,9 +83,6 @@ To create sequences from your data, make sure your data is contained in pandas d
 Build you sequences as follows:
 
 ```python
-# initialize a Sequence_builder
-
-seq_builder = Sequence_builder()
 """
 df: a pandas dataframe containing the training data
 DIMENSIONS_TO_PREDICT: list of the column names that we want to forecast (training targets)
@@ -94,8 +91,9 @@ SHUFFLE_SEQUENCES: set to True if you want your data to be randomly shuffled aft
 labels: put in an extra dataframe with features you want to keep out of your data 
 but evaluate further after testing
 """
+seq_builder = Sequence_builder()
 train_X, train_y, train_tags = seq_builder.fit_transform(df, DIMENSIONS_TO_PREDICT=['A','B','C','D'], 
 SEQ_LEN=3, PREDICTION_LENGTH=1, SHUFFLE_SEQUENCES=True, labels=tags)
 ```
 
-This example would result in the example above.
+This example creates the example above.
