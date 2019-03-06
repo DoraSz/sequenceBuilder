@@ -80,6 +80,8 @@ To carry out classification tasks, you can fill Y with class labels instead of f
 
 To create sequences from your data, make sure your data is contained in pandas dataframes.
 
+Build you sequences as follows:
+
 ```python
 # initialize a Sequence_builder
 
@@ -96,3 +98,4 @@ train_X, train_y, train_tags = seq_builder.fit_transform(df, DIMENSIONS_TO_PREDI
 SEQ_LEN=3, PREDICTION_LENGTH=1, SHUFFLE_SEQUENCES=True, labels=tags)
 ```
 
+This example would result in the example above.
