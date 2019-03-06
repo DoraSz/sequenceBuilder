@@ -1,14 +1,14 @@
-# sequenceBuilder
+# Sequence Builder: transform your time-series-data into sequences to feed into an LSTM Neural Network
 
 ## Information
 
-SequenceBuilder is a pip package/python class that enables preprocessing time-series-data contained in pandas dataframes and creating sequential input for further usage in recurrent neural networks for forecasting applications or classification tasks.
+SequenceBuilder is a pip package/python class that enables preprocessing time-series-data contained in pandas dataframes and creating sequential input for further usage in LSTM neural networks for forecasting applications or classification tasks.
 
 ## Setup
 
 To install the package, run 
 
-```python
+```
 pip install sequence_builder
 ```
 
@@ -22,7 +22,7 @@ to your code.
 
 You can also download the codebase from here and add 
 
-```
+```python
 from Sequence_builder import Sequence_builder
 ```
 
@@ -89,9 +89,10 @@ df: a pandas dataframe containing the training data
 DIMENSIONS_TO_PREDICT: list of the column names that we want to forecast (training targets)
 SEQ_LEN: length of sequences to create
 SHUFFLE_SEQUENCES: set to True if you want your data to be randomly shuffled after the sequences are built
-labels: put in an extra dataframe with features you want to keep out of your data but evaluate further after testing (e.g more distinct class labels)
+labels: put in an extra dataframe with features you want to keep out of your data 
+but evaluate further after testing
 """
-train_X, train_y, train_tags = seq_builder.fit_transform(
-    df, DIMENSIONS_TO_PREDICT=['A','B','C','D'], SEQ_LEN=3, PREDICTION_LENGTH=1, SHUFFLE_SEQUENCES=True, labels=tags)
+train_X, train_y, train_tags = seq_builder.fit_transform(df, DIMENSIONS_TO_PREDICT=['A','B','C','D'], 
+SEQ_LEN=3, PREDICTION_LENGTH=1, SHUFFLE_SEQUENCES=True, labels=tags)
 ```
 
