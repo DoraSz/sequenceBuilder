@@ -10,6 +10,7 @@ To install the package, run
 
 ```
 pip install sequence-builder
+
 ```
 
 and add 
