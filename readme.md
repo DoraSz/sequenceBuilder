@@ -1,4 +1,4 @@
-# Sequence Builder: transform your time-series-data into sequences to feed into an LSTM Neural Network
+# Sequence Builder for N-step-ahead-Forecasting: transform your time-series-data (e.g. sensory data) into sequences to feed into an LSTM Neural Network
 
 ## Information
 
