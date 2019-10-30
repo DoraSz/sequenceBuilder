@@ -10,7 +10,6 @@ To install the package, run
 
 ```
 pip install sequence-builder
-
 ```
 
 and add 
@@ -64,7 +63,7 @@ you can create training sequences of length 3 and of dimension 4 as
 
 To forecast future values (e.g. stock market prices, telemetry values), build your training data as follows (by shifting future values)  
 ```
-					   X                                 Y
+			X                                 Y
 [1,10,100,1000],[2,20,200,2000],[3,30,300,3000]   [4,40,400,4000]
 [2,20,200,2000],[3,30,300,3000],[4,40,400,4000]   [5,50,500,5000]
 [3,30,300,3000],[4,40,400,4000],[5,50,500,5000]   [6,60,600,6000]
